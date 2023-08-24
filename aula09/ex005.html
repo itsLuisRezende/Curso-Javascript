@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: rgb(152, 12, 212);
+            color:rgb(235, 231, 231);
+            font:normal 18pt Arial;
+        }
+        div[name="luis"] {
+            background:white
+        }
+    </style>
+</head>
+<body>
+    <h1> Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <div name="luis">Clique em mim</div>
+    <p>Aprendendo a usar o <strong>DOM</strong> em javascript.</p>
+    <script>
+        window.document.write(`${window.document.charset} <br/>`) // set de caractéres
+        window.document.write(`${window.navigator.appName}<br/>`) // navegador atual
+        window.document.write(`${window.document.URL}<br/>`) // link da pagina
+        
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var titulo = window.document.getElementsByTagName('h1')[0]
+        window.document.write(`Aqui está escrito: ${p1.innerHTML} <br/>`)
+        window.document.write(`Aqui está escrito: ${titulo.innerText} <br/>`)
+        titulo.style.color = 'blue'
+        corpo.style.background = 'black'
+        p1.style.color = 'green'
+       // var d = window.document.getElementById('msg')
+       // d.style.background = 'green'
+       // d.innerText = 'estou aguardando...'
+       var d = window.document.querySelector('[name="luis"]')
+       d.style.color = 'blue'
+      // d.style.background = 'red' 
+
+
+
+
+    </script>
+    </body>
+</html>

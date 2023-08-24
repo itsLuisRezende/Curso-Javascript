@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo a interagir</title>
+    <style>
+        body {
+            background:yellowgreen;
+            color:black;
+            font:normal 18pt times
+        }
+        h1 {
+            color:darkslateblue
+        }
+        div {
+            color:brown;
+            background:black;
+            margin-top: 50px;
+            width: 50%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1><strong>Interações com o mouse</strong></h1>
+    <p>Primeiro precisamos passar o mouse sobre o <strong>item</strong>.</p>
+    <p>Depois precisamos retirar o mouse sobre o item.</p>
+    <p>E por fim, vamos clicar para concluir a interação.</p>
+    <div name="console">Plataformas</div>
+
+    <script>
+        var d = window.document.querySelector(' [name=console]')
+        d.addEventListener('mouseenter', Playstation)
+        d.addEventListener('mouseout', Xbox)
+        d.addEventListener('click', PC)
+
+        function Playstation() {
+            d.innerHTML = 'Playstation'
+            d.style.color = 'blue'
+            d.style.background = 'black'
+        }
+        function Xbox() {
+            d.innerHTML = 'Xbox'
+            d.style.color = 'white'
+            d.style.background = 'green'
+        }
+        function PC() {
+            d.innerHTML = 'PC'
+            d.style.color = 'yellow'
+            d.style.background = 'purple'
+        }
+
+    </script>
+    
+</body>
+</html>

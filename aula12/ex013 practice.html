@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <h1>Data semanal</h1>
+    <div id="res">Hoje é...</div>
+    <div id="des"></div>
+
+    <script>
+        var dia = new Date()
+        //var diasem = dia.getDay()
+        var d = window.document.querySelector('div#des')
+    diasem = 1 
+        
+
+        switch (diasem) {
+            case 0:
+                d.innerHTML = `<p>Domingo!!</p>`
+                break
+            case 1:
+                d.innerHTML = `<p>Segunda-feira!!</p>`
+                break
+            case 2:
+                d.innerHTML = `<p>Terça-feira!!</p>`
+                break
+            case 3:
+                d.innerHTML = `<p>Quarta-feira!!</p>`
+                break
+            case 4:
+                d.innerHTML = `<p>Quinta-feria!!<p/>`
+                break
+            case 5:
+                d.innerHTML = `<p>Sexta-feira</p>`
+                break     
+            case 6:
+                d.innerHTML = `<p>Sabado!!<p/>`
+                break  
+                default:
+                    d.innerHTML = `<p> [ERRO] dia inválido`  
+        }
+    </script>
+    
+</body>
+</html>

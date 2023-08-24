@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A história de BIG BOSS</title>
+    <style>
+        body {
+            background-color:purple;
+            color:white;
+            font:normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>A vida de um soldado sem propósito</h1>
+    <p>Big boss lutou varias batalhas com o intuito de acabar de acabar com os patriots</p>
+    <p>Será que um dia essa guerra terá um fim?</p>
+    <div id="msg">Isso tudo não passa de uma ilusão...</div>
+    <div class="mensagem"> Qual será o destino de todos nós?</div>
+<script>
+    window.alert('vamos calcular números...')
+   var n1 =  Number(window.prompt('escolha um número...'))
+   var n2 =  Number(window.prompt('Escolha outro número...'))
+   var r = n1 + n2
+    window.confirm(`A soma dos números ${n1} e ${n2} é igual a ${r}, obrigado por calcular!`)
+    var nome = window.prompt('Como se chama?...')
+    window.confirm(' Olá ' + nome.toLowerCase() + '!' + ' muito prazer em conhece-lo')
+    window.confirm(`${nome.toUpperCase()}! , espero que goste de sua história! Seja bem vindo!`)
+    var corpo = window.document.body
+    window.document.write(`O nome de Big boss (sem ser seu título) possui ${nome.length} letras! <br/>`)
+    window.document.write(`${document.charset}<br/>`)
+    window.document.write(`${window.navigator.appName}<br/>`)
+    window.document.write(`${window.document.URL}<br/>`)
+    var titulo = window.document.getElementsByTagName('h1')[0]
+    var p1 = window.document.getElementsByTagName('p') [0]
+    var p2 = window.document.getElementsByTagName('p') [1]
+    window.document.write(`neste verso... (${p1.innerText}), concluímos que ele era um heroi! <br/>`)
+    window.document.write(`E neste verso...(${p2.innerHTML}), tambem vemos que isso esta longe de acabar...<br/>`)
+    p1.style.background = 'green'
+    p1.style.color = 'red'
+    corpo.style.background = 'black'
+    corpo.style.color = 'blue'
+    titulo.style.color = 'yellow'
+   /* var d = window.document.getElementById('msg')
+    d.style.color = 'blue'
+    d.style.background = 'blue'*/
+    var d = window.document.querySelector('div#msg')
+    d.style.color = 'blue'
+    d.style.background = 'green'
+    var di = window.document.getElementsByClassName('mensagem')[0]
+    di.style.background = 'red'
+    di.style.color = 'white'
+    
+    
+    
+    
+
+
+    
+    
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definição do país nativo</title>
+</head>
+<body>
+    <h1>De qual país eu sou?</h1>
+    País: <input type="text" name="txtpa" id="txtpa">
+    <input type="button" value="definir" onclick="paísnativo()">
+    <div id="res">
+
+    </div>
+    <script>
+        function paísnativo() {
+        var txtp = window.document.querySelector('input#txtpa')
+        var res = window.document.querySelector('div#res')
+        var txtpa = (txtp.value)
+        res.innerHTML = `<p>Se eu for do <strong>${txtpa}</strong>...</p>`
+        if (txtpa == 'Brasil') {
+            res.innerHTML += `<p>Eu sou <strong>brasileiro</strong>!!</p>`
+        }
+        else {
+            res.innerHTML += `<p> Eu sou <strong>estrangeiro</strong>!!`
+        }
+        }
+    </script>
+    
+</body>
+</html>

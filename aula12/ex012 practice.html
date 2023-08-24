@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faixa horária</title>
+    <style>
+        body {
+            background-color:black;
+            color: white;
+        }
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Definindo horário</h1>
+    <input type="number" name="time" id="time">
+    <input type="button" value="Analisar" onclick="tempo()"> 
+    <div id="res">Que horas são?</div>
+
+    <script>
+        function tempo() {
+        var tim = window.document.querySelector('input#time')
+        var hor = window.document.querySelector('div#res')
+        var val = (tim.value)
+          
+          if (val >= 6 && val <= 12) {
+            res.innerHTML = `<p>Bom dia!</p>`
+        } else if ( val > 12 && val <= 18) {
+            res.innerHTML = `<p>Boa tarde!<p/>`
+        }   else if ( val > 18) {
+            res.innerHTML = `<p>Boa noite!</p>`
+        } else if ( val >= 0 && val < 6) {
+            res.innerHTML = `<p>Boa madrugada!</p>`
+        }
+        }     
+    </script>
+    
+</body>
+</html>

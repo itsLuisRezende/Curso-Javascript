@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        body {
+            background-color:blueviolet;
+            color:aqua;
+            font:normal 18pt italic
+            }
+        h1 {
+            color:black;
+        }
+        div#res {
+            margin-top: 20px;
+            background-color:black;
+            width:400px;
+        }
+        input#txtvo {
+            height:30px;
+            background-color:white;
+            color:black;
+            font:normal 12pt times
+        }
+        input {
+            height:40px;
+            background-color:black;
+            color:white;
+            font:normal 15pt times
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de votos</h1>
+    <input type="number" name="txtvo" id="txtvo">
+    <input type="button" value="Conferir" onclick="votos()">
+    <div id="res">Insira sua idade...</div>
+
+    <script>
+        function votos() {
+            var txtvot = window.document.querySelector('input#txtvo')
+            var res = window.document.querySelector('div#res')
+            var vot = txtvo.value
+
+            if (vot > 18){
+                res.innerHTML = `<p> o voto é obrigatório.</p>`
+            }
+            else if (vot >=16 && vot < 18) { 
+                res.innerHTML = `<p> O voto é opcional.<p/>`
+            }
+            else if ( vot < 16) {
+                res.innerHTML = `<p>Você não possui idade o suficiente para votar.<p/>`
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

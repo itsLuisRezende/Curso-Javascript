@@ -19,9 +19,12 @@
    <h1> Ola, mundo!</h1>  <!-- titulo do texto-->
    <p> As coisas sairam do controle!</p>
    <script>
-      window.alert('minha primeira mensagem')  // mensagem...
-    window.confirm('você é um mestre dos magos?')
-     window.prompt('qual é o nome do castelo de dark souls?')  
+   var n1 = Number(window.prompt('digite um número:')) // string (Number.parseInt) e (Number.parseFloat)
+   var n2 = Number(window.prompt('digite outro numero:')) //string / para converter em string: String(n) e n.toString()
+   var s = n1 + n2
+   window.alert(`A soma dos números será igual a ${s}`) //concatenação
+    // number + number para adição
+    // string + string para concatenação
     </script>
 </body>
 </html>
