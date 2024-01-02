@@ -1,0 +1,23 @@
+body {
+    background-color:aqua;
+    font:normal 13pt italic;
+    
+}
+header {
+    text-align: center;
+
+}
+section {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin: auto;
+    width: 400px;
+    padding: 10px ;
+    box-shadow: 5px 10px 10px black
+}
+footer {
+    text-align: center;
+    font-style: times;
+    margin-top: 20px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto beta</title>
+    <style>
+        body {
+            background-color:aqua;
+            text-align: center;
+        }
+        section {
+            background-color:white;
+            border-radius: 10px;
+            box-shadow: 5px 10px 10px black;
+            margin: auto;
+            padding:15px;
+            text-align:left;
+            font:normal 12pt Arial;
+            width: 400px;
+        }
+        footer {
+            color:black;
+            margin-top: 20px
+
+        }
+        input#but {
+            font:normal 12pt Arial;
+            background-color:gray;
+            color:aqua
+        }
+        img {
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+
+    <section>
+        <div>
+        <p>Ano de nascimento:
+        <input type="number" name="txtano" id="txtano"></p>
+        </div>
+
+        <p>Sexo:
+        <input type="radio" name="radsex" id="mas" checked>
+        <label for="mas">Masculino</label>
+        <input type="radio" name="radsex" id="fem">
+        <label for="fem">Feminino</label>
+        <input id="but" type="button" value="Verificar()" onclick="verificar()"></p>
+
+        <div id="res">Aguardando preenchimento do formulário...</div>
+    </section>
+    <footer><strong>By LuisFernando</strong></footer>
+
+    <script>
+        function verificar() {
+        var data = new Date()
+        var ano = data.getFullYear()
+        var txtano = window.document.getElementById('txtano')
+        var res = window.document.getElementById('res')
+        if (txtano.value.length == 0 || Number(txtano.value) > ano) {
+            alert('[ERRO] Dados não compátiveis, tente novamente.')
+        } else {
+            var sex = window.document.getElementsByName('radsex')
+            var idade = ano - Number(txtano.value)
+            var genero = ''
+            var img = document.createElement('img')
+            img.setAttribute('id', 'foto')
+            if(sex[0].checked) {
+                if(idade >= 0 && idade < 10) {
+                    genero = 'criança'
+                    img.setAttribute('src', 'fotomenino.jpg')
+                    //criança
+            } else if (idade < 21) {
+                genero = 'adolescente'
+                img.setAttribute('src', 'fotogaroto.jpg')
+                    //adolescente
+            } else if (idade < 50) {
+                genero = 'adulto'
+                img.setAttribute('src', 'fotohomem.jpg')
+                    //adulto(a)
+            } else {
+                genero = 'idoso'
+                img.setAttribute('src', 'fotoidoso.jpg')
+                    //idoso(a)
+            }        
+                }
+                if(sex[1].checked) {
+                if(idade >= 0 && idade < 10) {
+                    genero = 'criança'
+                    img.setAttribute('src', 'fotomenina.jpg')
+                    //criança
+            } else if (idade < 21) {
+                genero = 'adolescente'
+                img.setAttribute('src', 'fotogarota.jpg')
+                    //adolescente
+            } else if (idade < 50) {
+                genero = 'adulta'
+                img.setAttribute('src', 'fotomulher.jpg')
+                    //adulto(a)
+            } else {
+                genero = 'idosa'
+                img.setAttribute('src', 'fotoidosa.jpg')
+                    //idoso(a)
+            }        
+                }
+                res.style.textAlign = 'center'
+                res.innerHTML = `<strong>Identificamos um(a) ${genero} com ${idade} anos.</strong>`
+                res.appendChild(img)
+            }
+
+            }
+        
+    </script>
+
+
+
+    
+</body>
+</html>
