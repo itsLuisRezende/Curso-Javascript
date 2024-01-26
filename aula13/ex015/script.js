@@ -12,42 +12,40 @@ function verificar() {
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
         if (fsex[0].checked) {
-        genero = 'homem'
-        if (idade >= 0 && idade <= 10) {
-        //Criança
-        img.setAttribute('src', 'fotomenino.jpg')
-    }   else if (idade < 21) {
-        //Adolescente
-        img.setAttribute('src', 'fotogaroto.jpg')
-    }   else if (idade < 50) {
-        //adulto
-        img.setAttribute('src', 'fotohomem.jpg')
-    }   else {
-        //idoso(a)
-        img.setAttribute('src', 'fotoidoso.jpg')
+            genero = 'homem'
+            if (idade >= 0 && idade <= 10) {
+                //Criança
+                img.setAttribute('src', 'fotomenino.jpg')
+            } else if (idade < 21) {
+                //Adolescente
+                img.setAttribute('src', 'fotogaroto.jpg')
+            } else if (idade < 50) {
+                //adulto
+                img.setAttribute('src', 'fotohomem.jpg')
+            } else {
+                //idoso(a)
+                img.setAttribute('src', 'fotoidoso.jpg')
+            }
+        } else if (fsex[1].checked) {
+            genero = 'mulher'
+            if (idade >= 0 && idade <= 10) {
+            //Criança
+            img.setAttribute('src', 'fotomenina.jpg')
+            } else if (idade < 21) {
+                //Adolescente
+                img.setAttribute('src', 'fotogarota.jpg')
+            } else if (idade < 50) {
+                //adulto
+                img.setAttribute('src', 'fotomulher.jpg')
+            } else {
+                //idoso(a)
+                img.setAttribute('src', 'fotoidosa.jpg')
+            }
+        }
+        
+        res.style.textAlign = 'center'
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        res.appendChild(img)
     }
-    }   else if (fsex[1].checked) {
-        genero = 'mulher'
-        if (idade >= 0 && idade <= 10) {
-        //Criança
-        img.setAttribute('src', 'fotomenina.jpg')
-    }   else if (idade < 21) {
-        //Adolescente
-        img.setAttribute('src', 'fotogarota.jpg')
-    }   else if (idade < 50) {
-        //adulto
-        img.setAttribute('src', 'fotomulher.jpg')
-    }   else {
-        //idoso(a)
-        img.setAttribute('src', 'fotoidosa.jpg')
-    }
-    }
-    
-    res.style.textAlign = 'center'
-    res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-    res.appendChild(img)
 }
-}
-
-
     
